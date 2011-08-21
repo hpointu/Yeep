@@ -5,7 +5,7 @@ set(YEEP_SOURCES ${YEEP_SOURCES})
 
 add_executable(yeep main.cpp ${YEEP_SOURCES})
 
-configure_file(res/play.png ../res COPYONLY)
-configure_file(res/pause.png ../res COPYONLY)
+configure_file(res/play.png ../res/play.png COPYONLY)
+configure_file(res/pause.png ../res/pause.png COPYONLY)
 
 target_link_libraries(yeep ${mainLibs})
