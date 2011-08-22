@@ -13,7 +13,7 @@ void Application::init()
 {
 	sf::WindowSettings settings;
 	settings.AntialiasingLevel = 2;
-	window.Create(sf::VideoMode(W_WIDTH, W_HEIGHT, 32), "Dies Irae", sf::Style::Close, settings);
+	window.Create(sf::VideoMode(W_WIDTH, W_HEIGHT, 32), "Yeeep !", sf::Style::Close, settings);
 
 	view = new sf::View(sf::Vector2f(0, 0), sf::Vector2f(W_WIDTH/2,W_HEIGHT/2));
 	view->Zoom(SCALE);
@@ -167,7 +167,8 @@ void Application::run()
 		{
 			std::stringstream ss;
 			ss << frameCpt;
-			std::cout << "fps: " << ss.get() << std::endl;
+			std::cout << "fps: " << ss.str() << std::endl;
+			hud->setFps(frameCpt);
 			clock.Reset();
 			frameCpt = 0;
 		}

@@ -9,17 +9,17 @@ class Hud
 public:
     Hud();
 
-	void render(sf::RenderTarget *t)
-	{
-		t->Draw(status);
-	}
+	void render(sf::RenderTarget *t);
 
+	void setFps(int val);
 	void refresh();
 
 private:
 //	std::vector<sf::Drawable*> elems;
 
 	sf::Sprite status;
+	sf::Font font1;
+	sf::String fps;
 
 	sf::Image imgPlay;
 	sf::Image imgPause;
